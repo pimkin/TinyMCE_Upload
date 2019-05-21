@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>#(title)</title>
+
+</head>
+<body>
+
+
+	<nav>
+
+		<span>Navigation : </span>
+		<a href="/" class="nav-link">Articles</a>
+		<span> - </span>    
+		<a href="/createArticle" class="nav-link">Create article</a>
+
+	</nav>
+
+	<div>
+
+		<h1>List of articles</h1>
+
+		<br>
+		<br>
+
+		#if(count(articles) == 0) {
+			<p>no created article yet.</p>
+		} else {
+
+			#for(article in articles) {
+				<div style="background-color: gray;">
+					#get(article.content)
+				</div>
+				<br>
+			}
+		}
+
+	</div>
+
+</body>
+</html>
+
